@@ -11,21 +11,35 @@ export const Container = styled.div`
     min-height: 100vh;
     
 `
+
+export const ContainerImg = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+`
 export const Image = styled.img`
     width: 342px;
     height: 354px;
-    margin: 25px 36px;
+    
 
    
 `
 
 export const ContainerItens = styled.div `
+    
     display: flex;
     flex-direction: column;
     width: 414px;
-    height: 100%;
+    height: 100vh;
     
     
+    
+`
+export const ContainerInput = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
     
 `
 
@@ -35,7 +49,7 @@ export const H1 = styled.h1`
     line-height: 33px;
     text-align: center;
     color: #FFFFFF;
-    margin: 0px 100px 76px
+    margin: 10px 20px
 
 `
 
@@ -53,7 +67,7 @@ width: 342px;
 height: 58px;
 background: rgba(255, 255, 255, 0.25);
 border-radius: 14px;
-margin: 0px 36px 46px;
+margin: 0px 36px 20px;
 outline:none;
 border:none;
 

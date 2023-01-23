@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 //import axios from "axios";
 import { useRef, useState} from "react";
 import burguerOne from '../../Assets/burguerOne.svg'
-import { Container, ContainerItens, H1, InputLabel, Input, Button, Image } from "./styles";
+import { Container, ContainerItens, ContainerImg, ContainerInput, H1, InputLabel, Input, Button, Image } from "./styles";
 
 
 
@@ -34,7 +34,10 @@ async function AddNewOrder (){
             
 
             <ContainerItens>
+            <ContainerImg>
             <Image alt="burguerCode" src={burguerOne}/>
+            </ContainerImg>
+            <ContainerInput>
                 <H1>Faça seu Pedido!</H1>
             
                 <InputLabel>Pedido</InputLabel>
@@ -44,6 +47,7 @@ async function AddNewOrder (){
                 <Input ref={InputName} placeholder="Digite seu nome aqui"></Input>
 
                 <Button onClick={AddNewOrder}>Novo Pedido</Button>
+                </ContainerInput>
             </ContainerItens>
         </Container>
     )

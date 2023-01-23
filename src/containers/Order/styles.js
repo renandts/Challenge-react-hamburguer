@@ -3,8 +3,6 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
- 
-    
     display: flex;
     justify-content: center;
     align-items:center;
@@ -14,10 +12,16 @@ export const Container = styled.div`
     
 
 `
+export const ContainerImg = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+`
 export const Image = styled.img`
     width: 246px;
     height: 354px;
-    margin: 0 84px 36px;
+    
 `
 
 export const ContainerItens = styled.div `
@@ -25,7 +29,7 @@ export const ContainerItens = styled.div `
     flex-direction: column;
     height: 100%;
     width: 414px;
-    margin-top:50px;
+   
     
 `
 
@@ -35,16 +39,17 @@ export const H1 = styled.h1`
     line-height: 33px;
     text-align: center;
     color: #FFFFFF;
-    margin: 5px 100px 5px;
+    margin-top:10px;
 
 `
 
 export const ContainerOrders = styled.div`
     width: 342px;
     //height: 101px;
+    gap:10px;
     background: rgba(255, 255, 255, 0.25);
     border-radius: 14px;
-    margin: 50px 36px 18px;
+    margin: 20px 36px;
     display:grid;
     flex-direction: column;
 
@@ -72,6 +77,7 @@ padding: 10px 27px;
 font-weight: 700;
 font-size: 18px;
 line-height: 21px;
+text-align: center;
 color: #FFFFFF;
 
 `
@@ -87,7 +93,7 @@ export const Button = styled.button`
 width: 342px;
 height: 68px;
 background: rgba(255, 255, 255, 0.14);
-margin: 20px 36px 56px;
+margin: 20px 36px;
 
 font-weight: 700;
 font-size: 17px;

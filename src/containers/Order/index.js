@@ -4,7 +4,8 @@ import axios from "axios";
 
 import burguerTwo from '../../Assets/burguerTwo.svg';
 import trash from '../../Assets/trash.svg';
-import { Container, ContainerItens, ContainerOrders, Button, Image, H1,  ImageTrash, OrderClient, NameClient,    } from "./styles";
+import { Container, ContainerItens, ContainerOrders, Button, Image, H1,  ImageTrash, OrderClient, NameClient, ContainerImg    } from "./styles";
+
 
 function Order (){
 
@@ -44,7 +45,9 @@ function Order (){
             
 
             <ContainerItens>
+                <ContainerImg>
                 <Image alt="burguerOrder" src={burguerTwo}/>
+                </ContainerImg>
                 
                 <H1>Pedidos</H1>
                 {orders.map((order) => (
