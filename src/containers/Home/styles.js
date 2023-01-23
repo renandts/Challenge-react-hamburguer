@@ -30,7 +30,7 @@ export const ContainerItens = styled.div `
     display: flex;
     flex-direction: column;
     width: 414px;
-    height: 100vh;
+    height: 100%;
     
     
     
