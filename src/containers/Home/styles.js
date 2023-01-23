@@ -31,17 +31,12 @@ export const ContainerItens = styled.div `
     flex-direction: column;
     width: 414px;
     height: 100%;
+    min-height:100vh;
     
     
     
 `
-export const ContainerInput = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 
-    
-`
 
 export const H1 = styled.h1`
     font-weight: 700;
