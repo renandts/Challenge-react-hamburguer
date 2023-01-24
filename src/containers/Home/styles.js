@@ -3,12 +3,17 @@ import styled from "styled-components";
 //import FundoBurguer from '../../Assets/fundoHamburguer.png'
 
 export const Container = styled.div`
+    
+    
     background: #0A0A10;
+    width:100%;
+    min-width: 100vw;
+
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items:center;
-    height: 100%;
-    min-height: 100vh;
+    
     
 `
 
