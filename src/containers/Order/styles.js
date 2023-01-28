@@ -3,14 +3,16 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
+  
+`
+export const ContainerItens = styled.div `
     display: flex;
-    justify-content: center;
-    align-items:center;
-    
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     background: #0A0A10;
+   
     
-
 `
 export const ContainerImg = styled.div`
     display: flex;
@@ -21,15 +23,6 @@ export const ContainerImg = styled.div`
 export const Image = styled.img`
     width: 246px;
     height: 354px;
-    
-`
-
-export const ContainerItens = styled.div `
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 414px;
-   
     
 `
 

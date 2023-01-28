@@ -3,20 +3,16 @@ import styled from "styled-components";
 //import FundoBurguer from '../../Assets/fundoHamburguer.png'
 
 export const Container = styled.div`
-    
-    
-    background: #0A0A10;
-    width:100%;
-    min-width: 100vw;
-
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    
-    
+  
 `
-
+export const ContainerItens = styled.div`
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0A0A10;
+       
+`
 export const ContainerImg = styled.div`
     display: flex;
     justify-content: center;
@@ -25,41 +21,33 @@ export const ContainerImg = styled.div`
 export const Image = styled.img`
     width: 342px;
     height: 354px;
-    
 
-   
+    @media (max-width: 500px){
+        width: 242px;
+    height: 200px;
+    }
+      
 `
-
-export const ContainerItens = styled.div `
-    
-    display: flex;
-    flex-direction: column;
-    width: 414px;
-    height: 100%;
-    min-height:100vh;
-    
-    
-    
-`
-
-
 export const H1 = styled.h1`
     font-weight: 700;
     font-size: 28px;
     line-height: 33px;
     text-align: center;
     color: #FFFFFF;
-    margin: 10px 20px
+    margin: 10px 20px;
+
+    @media(max-width:500px){
+        font-size:20px;
+    }
 
 `
-
 export const InputLabel = styled.p`
 font-weight: 700;
 font-size: 18px;
 line-height: 22px;
 letter-spacing: -0.408px;
 color: #EEEEEE;
-margin-left:56px;
+
 `
 
 export const Input = styled.input`
@@ -76,6 +64,12 @@ font-size: 18px;
 line-height: 30px;
 padding-left: 15px;
 color: #FFFFFF;
+
+@media(max-width:500px){
+        font-size:15px;
+        width: 312px;
+        height: 45px;
+    }
 
 
 `
@@ -101,5 +95,11 @@ cursor: pointer;
 &active{
    opacity:0.5 ;
 }
+
+@media(max-width:500px){
+        font-size:15px;
+        width: 312px;
+        height: 45px;
+    }
 
 `
