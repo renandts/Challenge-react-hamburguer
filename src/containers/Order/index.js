@@ -11,12 +11,14 @@ function Order (){
 
         const [orders, setOrders] = useState([])
         const navigate = useNavigate()
+
+        const baseUrl= "https://api-challenge-node-tiw7.vercel.app/orders"
         
       
           useEffect(() =>
           {
             async function fetchUsers (){
-            const {data: newOrder} = await axios.get("http://localhost:3001/orders");
+            const {data: newOrder} = await axios.get(`${baseUrl}`);
       
           setOrders(newOrder);}
       
@@ -28,7 +30,7 @@ function Order (){
         
       
           async function deleteOrder (orderId) {
-          await axios.delete(`http://localhost:3001/orders/${orderId}`);
+          await axios.delete(`${baseUrl}/${orderId}`);
           const newOrders = orders.filter(order => order.id !== orderId);
       
           setOrders(newOrders)

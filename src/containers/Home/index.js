@@ -15,9 +15,11 @@ const InputOrder = useRef()
 const InputName = useRef()
 const navigate = useNavigate()
 
+const baseURL = "https://api-challenge-node-tiw7.vercel.app/orders"
+
 
 async function AddNewOrder (){
-    const {data: newOrder} = await axios.post('http://localhost:3001/orders', {
+    const {data: newOrder} = await axios.post(`${baseURL}`, {
         order:InputOrder.current.value, clientName:InputName.current.value
     })
     setOrders([...orders, newOrder])

@@ -10,6 +10,7 @@ export const ContainerItens = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     background: #0A0A10;
        
 `
