@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-//import axios from "axios";
 import { useRef, useState} from "react";
 import burguerOne from '../../Assets/burguerOne.svg'
 import { Container, ContainerItens, ContainerImg, H1, InputLabel, Input, Button, Image } from "./styles";

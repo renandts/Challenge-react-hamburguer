@@ -9,69 +9,68 @@ import { Container, ContainerItens, ContainerOrders, Button, Image, H1,  ImageTr
 
 function Order (){
 
-        const [orders, setOrders] = useState([])
-        const navigate = useNavigate()
+  const [orders, setOrders] = useState([])
+  const navigate = useNavigate()
 
-        const baseUrl= "https://api-challenge-node-tiw7.vercel.app/orders"
+  const baseUrl= "https://api-challenge-node-tiw7.vercel.app/orders"
         
       
-          useEffect(() =>
-          {
-            async function fetchUsers (){
-            const {data: newOrder} = await axios.get(`${baseUrl}`);
+  useEffect(() =>
+    {
+      async function fetchUsers (){
+      const {data: newOrder} = await axios.get(`${baseUrl}`);
       
-          setOrders(newOrder);}
+      setOrders(newOrder);}
       
          
       
-          fetchUsers()
-          }, [])
+      fetchUsers()
+      }, [])
         
         
       
-          async function deleteOrder (orderId) {
-          await axios.delete(`${baseUrl}/${orderId}`);
-          const newOrders = orders.filter(order => order.id !== orderId);
+      async function deleteOrder (orderId) {
+      await axios.delete(`${baseUrl}/${orderId}`);
+      const newOrders = orders.filter(order => order.id !== orderId);
       
-          setOrders(newOrders)
-        }
+      setOrders(newOrders)
+      }
       
-        function goback () {
-          navigate("/");
-         }
+      function goback () {
+        navigate("/");
+      }
   
 
     return (
 
-        <Container>
+      <Container>
             
 
-            <ContainerItens>
-                <ContainerImg>
-                <Image alt="burguerOrder" src={burguerTwo}/>
-                </ContainerImg>
+        <ContainerItens>
+            <ContainerImg>
+              <Image alt="burguerOrder" src={burguerTwo}/>
+            </ContainerImg>
                 
-                <H1>Pedidos</H1>
-                {orders.map((order) => (
-                <ContainerOrders key={order.id}>
+            <H1>Pedidos</H1>
+            {orders.map((order) => (
+            <ContainerOrders key={order.id}>
                     
-                    <OrderClient>{order.order}</OrderClient>
-                    <button onClick={()=>{deleteOrder(order.id)}}>
-                    <ImageTrash alt="trash" src={trash}/>
-                    </button>
-                    <NameClient>{order.clientName}</NameClient>
+                <OrderClient>{order.order}</OrderClient>
+                <button onClick={()=>{deleteOrder(order.id)}}>
+                <ImageTrash alt="trash" src={trash}/>
+                </button>
+                <NameClient>{order.clientName}</NameClient>
                     
-                </ContainerOrders>
-                ))
-                }
-                <Button onClick={goback}>Voltar</Button>
-            </ContainerItens>
-        </Container>
+            </ContainerOrders>
+            ))
+            }
+            
+            <Button onClick={goback}>Voltar</Button>
+          </ContainerItens>
+      </Container>
 
 
     )
-
-
 }
 
 export default Order
