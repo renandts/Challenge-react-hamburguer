@@ -21,11 +21,6 @@ export const ContainerImg = styled.div`
 export const Image = styled.img`
     width: 342px;
     height: 354px;
-
-    //@media (max-width: 500px){
-       // width: 242px;
-    //height: 200px;
-    //}
       
 `
 export const H1 = styled.h1`
@@ -99,9 +94,8 @@ cursor: pointer;
 }
 
 @media(max-width:500px){
-    font-size:15px;
+    font-size:17px;
     width: 312px;
-    height: 45px;
     }
 
 `
